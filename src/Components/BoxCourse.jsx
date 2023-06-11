@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 const BoxCourse = ({data}) => {
   const navigate=useNavigate();
   const handleFunc=(data)=>{
-    navigate(`/User/Course/${data.course}`, { state: { data } });
+    navigate(`https://heisen-tamil-codingninjas.onrender.com/User/Course/${data.course}`, { state: { data } });
   }
   return (
     <div className="BoxCourse-fourth-Page" onClick={()=>handleFunc(data)}>
