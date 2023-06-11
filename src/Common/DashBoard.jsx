@@ -10,7 +10,7 @@ const DashBoard = () => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:8080/User/Course")
+      .get("https://heisen-tamil-codingninjas.onrender.com/User/Course")
       .then((res) => setData(res.data.State))
       .catch((error) => console.log(error));
   }, []);
