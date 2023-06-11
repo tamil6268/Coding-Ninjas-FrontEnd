@@ -3,7 +3,14 @@ import $ from "jquery";
 import axios from 'axios';
 const CourseMap=({data})=>{
 
-        //Paymanet Process//
+        const handleBuy=(data)=>{
+           localStorage.setItem("Entrolled-Courses",data.detailhead)
+           console.log(data)
+           const userDetails=localStorage.getItem("Token")
+           axios.post("https://heisen-tamil-codingninjas.onrender.com/User/Course",{state:data,token:userDetails})
+           .then((res) => {
+            console.log(res)
+                   //Paymanet Process//
 
         var orderId;
         $(document).ready(function () {
@@ -61,15 +68,6 @@ const CourseMap=({data})=>{
             e.preventDefault();
           };
         });
-    
-        //////////////////////////////////////////////////////////////////////////////
-        const handleBuy=(data)=>{
-           localStorage.setItem("Entrolled-Courses",data.detailhead)
-           console.log(data)
-           const userDetails=localStorage.getItem("Token")
-           axios.post("https://heisen-tamil-codingninjas.onrender.com/User/Course",{state:data,token:userDetails})
-           .then((res) => {
-            console.log(res)
            })
         }
     return(
