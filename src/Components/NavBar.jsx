@@ -10,6 +10,7 @@ const NavBar = () => {
   const [name, setName] = useState("");
   const [dummy, setDummy] = useState(2);
   const [menu, setMenu] = useState(false);
+  const [toolTip,setTooltip]=useState({})
   const navigate=useNavigate();
 
   const dataHover = [
@@ -40,6 +41,7 @@ const NavBar = () => {
         .then((res) => {
           if (res.message == "Token Verified") {
             setName(res.user.Name);
+            setTooltip({Name:res.user.Name,Email:res.user.Email})
           }
         });
     }
@@ -421,7 +423,7 @@ const NavBar = () => {
             My Classroom
           </div>
         )}
-        {extra && <div className="userId-Box">{name.slice(0, 1)}</div>}
+        {extra && <div className="userId-Box" title={toolTip.Name}>{name.slice(0, 1)}</div>}
         <div>
           <button className="btn-Nav-LogIn" onClick={handleLog} id="Login">
             {logOut ? "Login" : "Logout"}
