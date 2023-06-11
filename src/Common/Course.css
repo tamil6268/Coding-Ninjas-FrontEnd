@@ -1,0 +1,74 @@
+.Course-nav-page{
+    background-color: rgb(22, 51, 110);
+    position: fixed;
+    top: 0px;
+    border-bottom:1px solid white ;
+    box-sizing:border-box ;
+    z-index: +20;
+}
+.whole-container-course{
+    box-sizing:border-box ;
+    height: 100vh;
+    background:linear-gradient(rgb(21, 54, 119),rgb(160, 36, 160)) ;
+}
+.parent-box-course{
+    display:flex;
+    /* margin-top: 6%; */
+    transform: translateY(20%);
+    padding: 2% 10%;
+}
+.footer-media-course-page{
+    transform: translateY(18.5%);
+}
+.buy-now-btn{
+    width: 200px;
+    margin: 10px 0px;
+    background-color: rgb(19, 145, 19);
+    color: white;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0%{
+        width: 210px;
+        height: 45px;
+    }50%{
+        width: 220px;
+        height: 50px;
+    }100%{
+        width: 200px;
+        height: 40px;
+    }
+}
+.head-title-child-course{
+    font-size: 40px;
+    font-weight: 700;
+}
+.sub-head-title-child-course{
+    margin: 20px 0px;
+    font-size: 26px;
+    font-weight: 600;
+}
+.inner-box-course-rating{
+    display: flex;
+    align-items: center;
+}
+.inner-box-course-rating1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.strong-text-rate{
+    font-size: 32px;
+    font-weight: 600;
+}
+.strong-text-rate1{
+    font-size: 26px;
+    font-weight: 600;
+}
+.container-box-course-inner-parent{
+    display: flex;
+    flex-direction: column;
+}
+.content-box-rate{
+      font-size: 18px;
+}
