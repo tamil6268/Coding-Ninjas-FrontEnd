@@ -29,7 +29,7 @@ const NavBar = () => {
     if (token) {
       setExtra(true);
       setLogOut(false);
-      fetch("http://localhost:8080/user", {
+      fetch("https://heisen-tamil-codingninjas.onrender.com/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ const NavBar = () => {
       return;
     }
     if (count == 4) {
-      axios.post("http://localhost:8080/register", userData).then((res) => {
+      axios.post("https://heisen-tamil-codingninjas.onrender.com/register", userData).then((res) => {
         alert(res.data.message);
         console.log(res);
         setToggle(false);
@@ -126,7 +126,7 @@ const NavBar = () => {
       });
     }
     if (count == 2) {
-      axios.post("http://localhost:8080/login", userData).then((res) => {
+      axios.post("https://heisen-tamil-codingninjas.onrender.com/login", userData).then((res) => {
         alert(res.data.message);
         console.log(res);
         setToggle(false);
@@ -171,7 +171,7 @@ const NavBar = () => {
     }
 
     if (count == 4) {
-      axios.post("http://localhost:8080/register", userData).then((res) => {
+      axios.post("https://heisen-tamil-codingninjas.onrender.com/register", userData).then((res) => {
         alert(res.data.message);
         console.log(res);
         setToggle(false);
@@ -183,7 +183,7 @@ const NavBar = () => {
       });
     }
     if (count == 2) {
-      axios.post("http://localhost:8080/login", userData).then((res) => {
+      axios.post("https://heisen-tamil-codingninjas.onrender.com/login", userData).then((res) => {
         alert(res.data.message);
         console.log(res);
         setToggle(false);
