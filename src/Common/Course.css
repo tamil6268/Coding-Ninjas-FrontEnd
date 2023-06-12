@@ -72,3 +72,41 @@
 .content-box-rate{
       font-size: 18px;
 }
+@media screen and (max-width:875px){
+    .parent-box-course{
+        display:flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+    }
+    .whole-container-course{
+        height: 170vh;
+    }
+    .media-fifth-page-course{
+        margin-top: 20%;
+    }
+}
+@media screen and (max-width:785px){
+    .whole-container-course{
+        height: 170vh;
+    }
+    .media-fifth-page-course{
+        margin-top: 20%;
+    }
+    .whole-container-course{
+        height: 160vh;
+    }
+    .img-course-seperate-page{
+        width: 350px;
+    }
+}
+@media screen and (max-width:420px){
+    .media-fifth-page-course{
+        margin-top: 50%;
+    }
+    .whole-container-course{
+        height:180vh;
+    }
+    .img-course-seperate-page{
+        width: 250px;
+    }
+}

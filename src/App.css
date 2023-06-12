@@ -1465,6 +1465,12 @@ ul {
 /* MEDIA QUERY FOR (MAX-WIDTH to 940 PX) */
 
 @media screen and (max-width:940px) {
+    .third-one{
+        flex-direction: row;
+    }
+    .second-one,.fourth-one-bold{
+        font-size: small;
+    }
     .video-container-media{
         width: fit-content;
         height: 340px;
@@ -1732,12 +1738,48 @@ ul {
     }
 }
 
+
+@media screen and  (max-width:530px) {
+    .in-video-padding{
+        width: 320px;
+        padding-left: 0%;
+    }
+    .first-one,.new-one-next{
+        width: auto;
+    }
+    .big-Page-fourth-page::before,.big-Page-fourth-page1{
+        display: none;
+    }
+    .big-Page-fourth-page,.big-Page-fourth-page1{
+        padding-left: 20px;
+        position: relative;
+        top: 10%;
+        left: 0%; 
+    }
+    .content-below-join-btn{
+        width: 300px;
+        font-size: 25px;
+    }
+    .hex-box2,.hex-box1{
+        width: 130px;
+    }
+    .join-third-Page2{
+        padding: 0px;
+    }
+}
 @media screen and (min-width:100px) and (max-width:380px){
     .query-fourth-page-container{
-        margin-top: 35px;
+        margin-top: 38px;
     }
     .big-Page-fourth-page,.big-Page-fourth-page1,.news-updates{
        padding: 0px;
+    }
+    .big-Page-fourth-page{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .BoxCourse-fourth-Page{
+        width: 300px;
     }
     .child-fourth-page-sublim{
         display: none;
@@ -1745,9 +1787,6 @@ ul {
     .news-updates{
         width: 100vw;
         box-sizing: border-box;
-    }
-    .content-below-join-btn{
-        font-size: 25px;
     }
     .hex-box2,.hex-box1{
         width: 130px;
@@ -1763,6 +1802,19 @@ ul {
         position: absolute;
         top: 30px;
         left: 10px;
+    }
+    .content-below-join-btn{
+        width: 300px;
+        font-size: 25px;
+    }
+    .hex-box2,.hex-box1{
+        width: 130px;
+    }
+    .join-third-Page2{
+        padding: 0px;
+    }
+    .payment-neetchae-least-end{
+        flex-direction: column;
     }
 }
 

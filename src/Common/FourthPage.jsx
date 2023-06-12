@@ -747,7 +747,7 @@ const FourthPage = () => {
             <div className="first-one">
               India Inc on Reviving Our Economy NewsX & BW Special
             </div>
-            <div>
+            <div className="new-one-next">
               Ankush Singla, Co-Founder, Coding Ninjas joins a panel discussion
               with other industry stalwarts to talk about the economy in the
               times of COVID-19.

@@ -11,6 +11,10 @@ const CourseMap=({data})=>{
            .then((res) => {
             console.log(res)
                    //Paymanet Process//
+           axios.post("http://localhost:8080/User/Course",{state:data,token:userDetails})
+           .then((res) => {
+            console.log(res)
+            //Paymanet Process//
 
         var orderId;
         $(document).ready(function () {
@@ -69,7 +73,7 @@ const CourseMap=({data})=>{
           };
         });
            })
-        }
+        })}
     return(
         <div className="parent-box-course">
         <div className="child-box-course">
@@ -107,7 +111,7 @@ const CourseMap=({data})=>{
           </div>
         </div>
         <div className="child-box-course">
-            <img src={data.detailurl}alt="img"/>
+            <img className="img-course-seperate-page"src={data.detailurl}alt="img"/>
         </div>
       </div>
     )

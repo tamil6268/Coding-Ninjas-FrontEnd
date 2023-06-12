@@ -46,11 +46,12 @@ function FifthPage() {
   return (
     <div>
       <h2 className="head-final">UPCOMING EVENTS</h2>
-      <a href="https://www.codingninjas.com/events/bitblitz-ieee-wie-muj">
+      
       <div className="fifth-container-flex">
       {obj.map((item, index) => {
         return (
-            <div className="box-no-one " key={index}>
+            <div className="box-no-one " key={index} >
+              <a href="https://www.codingninjas.com/events/bitblitz-ieee-wie-muj">
                <div>
                <img src={item.url} alt="img" width={300}/>
                </div>
@@ -69,11 +70,11 @@ function FifthPage() {
                   </div>
                   <div className="flex-fifth-box-four">{item.four}</div>
                </div>
+               </a>
             </div>
             )
       })}
       </div>
-      </a>
     </div>
   );
 }

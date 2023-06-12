@@ -20,7 +20,7 @@ const Course = () => {
       </div>
       <CourseMap data={state}/>
 
-      <div style={{color:"black"}}>
+      <div style={{color:"black"}} className="media-fifth-page-course">
       <FifthPage/>
       </div>
       <div className="footer-media-course-page">

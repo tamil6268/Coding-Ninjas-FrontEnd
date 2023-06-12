@@ -12,7 +12,8 @@ const NavBar = () => {
   const [menu, setMenu] = useState(false);
   const [toolTip,setTooltip]=useState({})
   const navigate=useNavigate();
-
+  
+  console.log("tool",toolTip)
   const dataHover = [
     {
       url: "https://files.codingninjas.com/student-24426.png",
@@ -41,6 +42,7 @@ const NavBar = () => {
         .then((res) => {
           if (res.message == "Token Verified") {
             setName(res.user.Name);
+            console.log(res.user)
             setTooltip({Name:res.user.Name,Email:res.user.Email})
           }
         });
