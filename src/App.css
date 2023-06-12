@@ -1,6 +1,9 @@
 /* animation-loading */
 .animation-loading{
-    margin-left: 90%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: hover 1s linear infinite;
 }
 @keyframes hover {
@@ -1741,6 +1744,14 @@ ul {
 /* MEDIA QUERY FOR (MAX-WIDTH to 600 PX) */
 
 @media screen and (max-width:600px) {
+    .animation-loading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .animation-loading-img{
+        width: 300px;
+    }
     #Why-to-join-us{
         padding-left: 50px;
     }

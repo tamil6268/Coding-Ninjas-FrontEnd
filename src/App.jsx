@@ -24,7 +24,7 @@ function App() {
   return (
       <div id="body">
     <Routes>
-      <Route path="/" element={loading ?<div className="animation-loading"><img src="https://successinsightsindia.com/wp-content/uploads/2022/02/Coding-Ninjas-Logo.jpg" width={500}alt=""/></div>:<Home/>}/>
+      <Route path="/" element={loading ?<div className="animation-loading"><img className="animation-loading-img" src="https://successinsightsindia.com/wp-content/uploads/2022/02/Coding-Ninjas-Logo.jpg" width={500}alt=""/></div>:<Home/>}/>
       {/* <Route path="/" element={<Home/>}/> */}
       {logged ?<Route path="/User/Course/:course" element={<Course/>}/>:<Route path="/User/Course/:course" element={<Error/>}/>}
       <Route path="*" element={<Error/>}/>
