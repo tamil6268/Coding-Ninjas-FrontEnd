@@ -11,7 +11,7 @@ const DashBoard = () => {
   useEffect(() => {
     axios
       .get("https://heisen-tamil-codingninjas.onrender.com/User/Course")
-      .then((res) => setData(res.data.State))
+      .then((res) => setData(new Set(res.data.State)))
       .catch((error) => console.log(error));
   }, []);
   return (
