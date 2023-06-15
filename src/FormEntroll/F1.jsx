@@ -24,7 +24,8 @@ export class F1 extends Component {
           />
         </div>
 
-        <h2>Enter Personal Details</h2>
+        <h2>Personal Details</h2>
+        <div>Occupation</div>
         <input
           placeholder="Enter Your Occupation "
           floatingLabelText="Occupation"
