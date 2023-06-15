@@ -17,24 +17,29 @@ export class F3 extends Component {
         // this.props.values;
         return (
                 <React.Fragment>
+                    <h2>Welcome to the Ninjas Family!</h2>
+                    <div>
+                        <img src="https://files.codingninjas.in/ft-onboarding-welcome-msg-5707.svg"alt="error"/>
+                    </div>
+                  
                     <h2>College Information:</h2>
                     <input type="text" className="input-box" placeholder="College Name"/>
                     <input type="text" className="input-box" placeholder="Course"/>
                     <input type="date" className="input-box" placeholder="Graduation Year"/>
                     <input type="text" className="input-box" placeholder=""/>
                     <input type="text" className="input-box" placeholder="College Name"/>
+                    <div>
                     <button 
                         placeholder='Confirm & Continue'
                         primary={true}
                         style={styles.button}
-                        onClick={this.continue}
-                >Submit</button>
+                        onClick={this.continue}>Submit</button>
                     <button 
                         placeholder='Back'
                         primary={false}
                         style={styles.button}
-                        onClick={this.back}
-                >Back</button>
+                        onClick={this.back}>Back</button>
+                    </div>
                 </React.Fragment>
         )
     }

@@ -71,9 +71,9 @@ export class Main extends Component {
                 )
             case 4:
                 return (
-                <div >
+                <div style={{with:"100vw",height:"100vh",backgroundColor:"white",position:"fixed"}}>
                     <img src="https://files.codingninjas.in/course-pause-new-13988.png"alt="404 Error"/>
-                    <Link to="/"></Link>
+                    <Link to="/">Proceed</Link>
                 </div>
             )
         }
