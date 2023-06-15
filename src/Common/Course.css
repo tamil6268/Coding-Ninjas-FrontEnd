@@ -72,6 +72,8 @@
 .content-box-rate{
       font-size: 18px;
 }
+
+
 @media screen and (max-width:875px){
     .parent-box-course{
         display:flex;

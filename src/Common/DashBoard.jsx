@@ -14,6 +14,8 @@ const DashBoard = () => {
       .then((res) => setData(new Set(res.data.State)))
       .catch((error) => console.log(error));
   }, []);
+
+  // console.log("Data",data[data.length-1])
   return (
     <div>
       <div className="course-container">
@@ -32,25 +34,21 @@ const DashBoard = () => {
         <hr />
         {data.length > 0 ? (
           <div className="course-container-in">
-            {data.map((item, index) => {
-              return (
-                <div key={index} className="course-container-individual">
+                <div className="course-container-individual">
                   <div className="course-container-in">
-                    <div className="course-container-in-one">{item.course}</div>
-                    <div>{item.detailcontent}</div>
+                    <div className="course-container-in-one">{data[data.length-1].course}</div>
+                    <div>{data[data.length-1].detailcontent}</div>
                     <div className="course-container-in-two">
-                      {item.detailhead}
+                      {data[data.length-1].detailhead}
                     </div>
                   </div>
                   <div className="course-container-in">
-                    <img src={item.url} alt={item.h1} width={90} />
+                    <img src={data[data.length-1].url} alt={data[data.length-1].h1} width={90} />
                     <button style={{ cursor: "not-allowed" }} disabled>
                       Entolled
                     </button>
                   </div>
                 </div>
-              );
-            })}
             <button
               style={{ cursor: "pointer", backgroundColor: "tomato" }}
               onClick={handleClick}

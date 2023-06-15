@@ -11,6 +11,7 @@ const NavBar = () => {
   const [dummy, setDummy] = useState(2);
   const [menu, setMenu] = useState(false);
   const [toolTip,setTooltip]=useState({})
+  const [hover,setHover]=useState(false)
   const navigate=useNavigate();
   
   console.log("tool",toolTip)
@@ -49,16 +50,8 @@ const NavBar = () => {
     }
   }, [dummy, logOut, logged]);
   const handleLog = () => {
-    if (document.getElementById("Login").innerText == "Logout") {
-      localStorage.removeItem("Token");
-      alert("Logout Succeafully");
-      setLogOut(true);
-      setDummy(3);
-      setExtra(false);
-    } else {
       setToggle(true);
       setDummy(4);
-    }
   };
   const [userData, setUserData] = useState({
     Name: "",
@@ -77,7 +70,7 @@ const NavBar = () => {
   const validate = {
     Name: /^[a-zA-Z]{5,12}$/i,
     Email: /^[a-zA-Z0-9]+@+gmail+.com/,
-    Password: /^[A-Z]+[a-z]+[0-9]$/i,
+    Password: /^[A-Za-z0-9]{5,12}$/i,
     Contact: /^[1-9]{10}$/
   };
 
@@ -101,7 +94,7 @@ const NavBar = () => {
     }
 
     if (!validate.Password.test(userData.Password)) {
-      errorMessage.Password = "should be above 3 letters with (A-Z,a-z,0-9)";
+      errorMessage.Password = "password lenght(6-12)";
     } else {
       count += 1;
       errorMessage.Password = "";
@@ -223,6 +216,13 @@ const NavBar = () => {
     }, 2000);
   };
 
+  const handleLogout=()=>{
+      localStorage.removeItem("Token");
+      alert("Logout Succeafully");
+      setLogOut(true);
+      setDummy(3);
+      setExtra(false);
+  }
   return (
     <div style={{ width: "98.7vw" }}>
       <div id="parent-Nav">
@@ -425,12 +425,20 @@ const NavBar = () => {
             My Classroom
           </div>
         )}
-        {extra && <div className="userId-Box" title={toolTip.Name}>{name.slice(0, 1)}</div>}
-        <div>
-          <button className="btn-Nav-LogIn" onClick={handleLog} id="Login">
-            {logOut ? "Login" : "Logout"}
-          </button>
+        {extra && <div className="userId-Box" title={toolTip.Name} onMouseEnter={()=>setHover(true)}>{name.slice(0, 1)}</div>}
+        {hover &&
+          <div className="hover-user-details">
+          <div className="hover-user-details-Name">TAMILARASAN</div>
+          <div className="hover-user-details-Time">Using Timezone: Asia - Calcutta</div>
+          <button className="btn-Nav-LogIn" onClick={handleLogout}>Logout</button>
         </div>
+        }
+         
+        {logOut && <div>
+          <button className="btn-Nav-LogIn" onClick={handleLog} id="Login">
+            Login
+          </button>
+        </div>}
         <button className="btn-Nav-entroll hide" onClick={handleClick}>
           Entroll Now
         </button>

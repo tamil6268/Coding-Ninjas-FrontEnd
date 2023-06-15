@@ -11,7 +11,7 @@ const CourseMap=({data})=>{
            .then((res) => {
             console.log(res)
                    //Paymanet Process//
-           axios.post("http://localhost:8080/User/Course",{state:data,token:userDetails})
+           axios.post("https://heisen-tamil-codingninjas.onrender.com/User/Course",{state:data,token:userDetails})
            .then((res) => {
             console.log(res)
             //Paymanet Process//

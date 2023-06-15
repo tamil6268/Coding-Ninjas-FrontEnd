@@ -82,7 +82,7 @@ const FourthPage = () => {
       count += 1;
       errorMessage.Email = "";
     }
-    if (!validate.Year.test(form.Graduateyear)) {
+    if (!validate.Year.test(form.Graduateyear)&&((form.Graduateyear>2023)||(1995>form.Graduateyear))) {
       errorMessage.Graduateyear = "year should be (1995-2023)";
     } else {
       count += 1;
