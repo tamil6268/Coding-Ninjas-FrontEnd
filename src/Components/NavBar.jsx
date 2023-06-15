@@ -438,8 +438,10 @@ const NavBar = () => {
         )}
         {extra && (
           <>
-            <div className="userId-Box" id="userId-Box" title={
-              <div className="hover-user-details">
+            <div className="userId-Box" id="userId-Box" title={toolTip.Name}>
+              {name.slice(0, 1)}
+            </div>
+            <div className="hover-user-details">
               <div className="hover-user-details-Name">{name.toUpperCase()}</div>
               <div className="hover-user-details-Time">
                 Using Timezone: Asia - Calcutta
@@ -448,10 +450,6 @@ const NavBar = () => {
                 Logout
               </button>
             </div>
-            }>
-              {name.slice(0, 1)}
-            </div>
-            
           </>
         )}
 

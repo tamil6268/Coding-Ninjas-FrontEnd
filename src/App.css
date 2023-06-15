@@ -373,7 +373,7 @@
     z-index: +20;
     line-height: 26px;
     padding: 10px;
-    display: none;
+    visibility: hidden;
 }
 .hover-user-details-Name{
     font-weight: 600;
@@ -382,7 +382,7 @@
     font-size: 12px;
 }
 .hover-user-details:hover{
-    display: initial;
+    visibility: visible;
 }
 /* Home Second Page */
 
