@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 const StartLearning = () => {
   const navigate=useNavigate();
   const handleClick=()=>{
-    naviagate('/app/onboarding')
+    navigate('/app/onboarding')
   }
   return (
     <div className="whole-container-course">
