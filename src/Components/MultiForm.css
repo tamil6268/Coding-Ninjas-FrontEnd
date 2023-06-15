@@ -1,28 +1,21 @@
 .multi-form-container{
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: rgb(63, 12, 131);
     color: black;
 }
 .multi-parent-flex{
     width: 500px;
-    height: 500px;
+    height: 550px;
     background-color: azure;
     border-radius: 15px;
     border: none;
     align-items: center;
-    position: absolute;
-    top: 10%;
-    left: 5%;
-}
-.multi-one{
-  width: 400px;
-  height: 430px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.multi-two{
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

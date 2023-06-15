@@ -44,6 +44,10 @@ export default function RowAndColumnGap() {
           gridTemplateColumns: 'repeat(2, 1fr)',
         }}
       >
+        <div style={{display:"flex",justifyContent:"space-evenly",alignItems:"center"}}>
+        <div><input type="radio" name="student"/>I am a Student</div>
+        <div><input type="radio" name="student"/>I am Experienced</div>
+        </div>
         <Item><div>Name</div>
             <input type="text" placeholder="Enter Name"/>
         </Item>
