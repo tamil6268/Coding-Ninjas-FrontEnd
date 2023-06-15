@@ -437,19 +437,21 @@ const NavBar = () => {
           </div>
         )}
         {extra && (
-          <div className="userId-Box" id="userId-Box" title={toolTip.Name}>
-            {name.slice(0, 1)}
-          </div>
+          <>
+            <div className="userId-Box" id="userId-Box" title={toolTip.Name}>
+              {name.slice(0, 1)}
+            </div>
+            <div className="hover-user-details">
+              <div className="hover-user-details-Name">TAMILARASAN</div>
+              <div className="hover-user-details-Time">
+                Using Timezone: Asia - Calcutta
+              </div>
+              <button className="btn-Nav-LogIn" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+          </>
         )}
-        <div className="hover-user-details">
-          <div className="hover-user-details-Name">TAMILARASAN</div>
-          <div className="hover-user-details-Time">
-            Using Timezone: Asia - Calcutta
-          </div>
-          <button className="btn-Nav-LogIn" onClick={handleLogout}>
-            Logout
-          </button>
-        </div>
 
         {logOut && (
           <div>

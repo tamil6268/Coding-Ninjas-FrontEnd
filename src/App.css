@@ -381,10 +381,7 @@
 .hover-user-details-Time{
     font-size: 12px;
 }
-.hover-user-details{
-    display: none;
-}
-.userId-Box:hover .hover-user-details{
+.hover-user-details:hover{
     display: initial;
 }
 /* Home Second Page */

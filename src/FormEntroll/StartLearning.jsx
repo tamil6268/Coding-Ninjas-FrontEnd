@@ -2,8 +2,12 @@ import "../Common/Course.css";
 import NavBar from "../Components/NavBar.jsx";
 import Footer from "../Components/Footer.jsx";
 import FifthPage from "../Common/FifthPage.jsx";
-
+import {useNavigate} from 'react-router-dom';
 const StartLearning = () => {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    naviagate('/app/onboarding')
+  }
   return (
     <div className="whole-container-course">
       <div className="Course-nav-page">
@@ -20,7 +24,7 @@ const StartLearning = () => {
             expert led popular courses
           </div>
 
-          <button style={{width:"230px",backgroundColor:"orange",fontSize:"18px",height:"50px",color:'white'}}>
+          <button style={{width:"230px",backgroundColor:"orange",fontSize:"18px",height:"50px",color:'white'}} onClick={handleClick}>
             Get Started
           </button>
         </div>
