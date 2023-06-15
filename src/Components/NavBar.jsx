@@ -240,6 +240,9 @@ const NavBar = () => {
   };
   const handleHover=()=>{
       setHover(!hover)
+      setTimeout(()=>{
+        setHover(false)
+      })
   }
   return (
     <div style={{ width: "98.7vw" }}>
