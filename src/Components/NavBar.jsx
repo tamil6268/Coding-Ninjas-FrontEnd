@@ -237,6 +237,13 @@ const NavBar = () => {
     setDummy(3);
     setExtra(false);
   };
+  const handleHover=()=>{
+    if(localStorage.getItem('Token')){
+      setHover(!hover)
+    }else{
+      setHover(false)
+    }
+  }
   return (
     <div style={{ width: "98.7vw" }}>
       <div id="parent-Nav">
@@ -438,7 +445,7 @@ const NavBar = () => {
         )}
         {extra && (
           <>
-            <div className="userId-Box" id="userId-Box" title={toolTip.Name} onClick={()=>setHover(!hover)}>
+            <div className="userId-Box" id="userId-Box" title={toolTip.Name} onClick={handleHover}>
               {name.slice(0, 1)}
             </div>
           </>
