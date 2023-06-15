@@ -3,6 +3,7 @@ import F2 from './F2';
 import F1 from './F1';
 import F3 from './F3';
 import F4 from './F4';
+import {Link} from 'react-router-dom';
 
 export class Main extends Component {
     state = {
@@ -71,7 +72,10 @@ export class Main extends Component {
                 )
             case 4:
                 return (
-                <div style={{display:"flex",alignItems:"center"}}><F4 /></div>
+                <div >
+                    <img src="https://files.codingninjas.in/course-pause-new-13988.png"alt="404 Error"/>
+                    <Link to="/">Proceed</Link>
+                </div>
             )
         }
     }
