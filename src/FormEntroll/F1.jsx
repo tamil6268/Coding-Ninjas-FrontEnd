@@ -16,7 +16,7 @@ export class F1 extends Component {
     // this.props.values;
     return (
       <React.Fragment>
-        <h2>Welcome to the Ninjas Family!</h2>
+        {/* <h2>Welcome to the Ninjas Family!</h2> */}
         <div>
           <img
             src="https://files.codingninjas.in/ft-onboarding-welcome-msg-5707.svg"
@@ -25,26 +25,26 @@ export class F1 extends Component {
         </div>
 
         <h2>Personal Details</h2>
-        <div>Occupation</div>
+        {/* <div>Occupation</div> */}
         <input
-          placeholder="Enter Your Occupation "
-          floatingLabelText="Occupation"
-          onChange={handleChange("occupation")}
-          defaultValue={values.occupation}
+          className="form-entroll-page-input"
+          type="text"
+          placeholder="Enter State"
         />
-        <br />
         <input
-          placeholder="Enter Your City"
-          floatingLabelText="City"
-          onChange={handleChange("city")}
-          defaultValue={values.city}
+          className="form-entroll-page-input"
+          type="number"
+          placeholder="Pin-Code"
+        />
+        <input
+          type="number"
+          placeholder="Mobile No"
+          className="form-entroll-page-input"
         />
         <br />
         <input
           placeholder="Enter Your Bio"
-          floatingLabelText="Bio"
-          onChange={handleChange("bio")}
-          defaultValue={values.bio}
+          className="form-entroll-page-input"
         />
         <br />
         <div>

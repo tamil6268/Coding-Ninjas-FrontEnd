@@ -3,6 +3,7 @@ import F2 from './F2';
 import F1 from './F1';
 import F3 from './F3';
 import {Link} from 'react-router-dom';
+import zIndex from '@mui/material/styles/zIndex';
 
 export class Main extends Component {
     state = {
@@ -69,13 +70,13 @@ export class Main extends Component {
                         values={values}
                     />
                 )
-            case 4:
-                return (
-                <div style={{with:"100vw",height:"100vh",backgroundColor:"white",position:"fixed"}}>
-                    <img src="https://files.codingninjas.in/course-pause-new-13988.png"alt="404 Error"/>
-                    <Link to="/">Proceed</Link>
-                </div>
-            )
+            // case 4:
+            //     return (
+            //     <div style={{width:"100vw",height:"100vh",backgroundColor:"black",display:"flex",flexDirection:"column",rowGap:"20px",zIndex:"+22"}}>
+            //         <img src="https://files.codingninjas.in/course-pause-new-13988.png"width={1200}alt="404 Error"/>
+            //         <Link to="/">Proceed</Link>
+            //     </div>
+            // )
         }
     }
 }

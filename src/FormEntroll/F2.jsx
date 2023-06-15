@@ -20,21 +20,21 @@ export class F2 extends Component {
                    </div>
                     <input
                         placeholder='Enter Your First Name'
-                        floatingLabelText='First Name'
+                        className="form-entroll-page-input"
                         onChange={handleChange('firstName')}
                         defaultValue={values.firstName}
                     />
                     <br/>
                     <input
                         placeholder='Enter Your Last Name'
-                        floatingLabelText='Last Name'
+                        className="form-entroll-page-input"
                         onChange={handleChange('lastName')}
                         defaultValue={values.lastName}
                     />
                     <br/>
                     <input
                         placeholder='Enter Your Email'
-                        floatingLabelText='Email'
+                        className="form-entroll-page-input"
                         onChange={handleChange('email')}
                         defaultValue={values.email}
                     />
