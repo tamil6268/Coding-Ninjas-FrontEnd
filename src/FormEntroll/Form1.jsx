@@ -32,7 +32,7 @@ export default function RowAndColumnGap() {
   return (
     <div style={{ width: '100%' ,height:'20px' }}>
          <h2>Welcome to the Coding Ninjas Family</h2>
-         <div>
+         <div style={{display:"flex",flexDirection:"column",justifyContent:"start"}}>
             <div>Congratulations!</div>
             <div>you have successfully signed up for a <b>free trail of the course</b></div>
          </div>
