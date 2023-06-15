@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
 
 export class F1 extends Component {
     continue = e => {
@@ -18,44 +15,43 @@ export class F1 extends Component {
         const { values, handleChange } = this.props;
         // this.props.values;
         return (
-            <MuiThemeProvider>
                 <React.Fragment>
                     <h2>Enter Personal Details</h2>
-                    <TextField
-                        hintText='Enter Your Occupation '
+                    <input
+                        placeholder='Enter Your Occupation '
                         floatingLabelText='Occupation'
                         onChange={handleChange('occupation')}
                         defaultValue={values.occupation}
                     />
                     <br/>
-                    <TextField
-                        hintText='Enter Your City'
+                    <input
+                        placeholder='Enter Your City'
                         floatingLabelText='City'
                         onChange={handleChange('city')}
                         defaultValue={values.city}
                     />
                     <br/>
-                    <TextField
-                        hintText='Enter Your Bio'
+                    <input
+                        placeholder='Enter Your Bio'
                         floatingLabelText='Bio'
                         onChange={handleChange('bio')}
                         defaultValue={values.bio}
                     />
                     <br/>
-                    <RaisedButton 
+                    <div>
+                    <button 
                         label='Continue'
                         primary={true}
                         style={styles.button}
-                        onClick={this.continue}
-                    />
-                    <RaisedButton 
+                        onClick={this.continue}>Next</button>
+                   
+                    <button 
                         label='Back'
                         primary={false}
                         style={styles.button}
-                        onClick={this.back}
-                    />
+                        onClick={this.back}>Back</button>
+                    </div>
                 </React.Fragment>
-            </MuiThemeProvider>
         )
     }
 }

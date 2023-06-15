@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
-import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
 
 export class F2 extends Component {
     continue = e => {
@@ -13,7 +9,6 @@ export class F2 extends Component {
         const { values, handleChange } = this.props;
         // this.props.values;
         return (
-            <MuiThemeProvider>
                 <React.Fragment>
                     <h2>Welcome to the Ninjas Family!</h2>
                     <div>
@@ -23,35 +18,34 @@ export class F2 extends Component {
                    <div><input type="radio" name="student"/>I Am the Student</div>
                     <div><input type="radio" name="student"/>I am Experienced Person</div>
                    </div>
-                    <TextField
-                        hintText='Enter Your First Name'
+                    <input
+                        placeholder='Enter Your First Name'
                         floatingLabelText='First Name'
                         onChange={handleChange('firstName')}
                         defaultValue={values.firstName}
                     />
                     <br/>
-                    <TextField
-                        hintText='Enter Your Last Name'
+                    <input
+                        placeholder='Enter Your Last Name'
                         floatingLabelText='Last Name'
                         onChange={handleChange('lastName')}
                         defaultValue={values.lastName}
                     />
                     <br/>
-                    <TextField
-                        hintText='Enter Your Email'
+                    <input
+                        placeholder='Enter Your Email'
                         floatingLabelText='Email'
                         onChange={handleChange('email')}
                         defaultValue={values.email}
                     />
                     <br/>
-                    <RaisedButton 
+                    <button 
                         label='Continue'
                         primary={true}
                         style={styles.button}
                         onClick={this.continue}
-                    />
+                    >Next</button>
                 </React.Fragment>
-            </MuiThemeProvider>
         )
     }
 }
