@@ -442,7 +442,7 @@ const NavBar = () => {
               {name.slice(0, 1)}
             </div>
             <div className="hover-user-details">
-              <div className="hover-user-details-Name">TAMILARASAN</div>
+              <div className="hover-user-details-Name">{name.toUpperCase()}</div>
               <div className="hover-user-details-Time">
                 Using Timezone: Asia - Calcutta
               </div>
