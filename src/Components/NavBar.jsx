@@ -14,6 +14,9 @@ const NavBar = () => {
   const [hover,setHover]=useState(false)
   const navigate=useNavigate();
   
+  document.getElementById('userId-Box').addEventListener('mouseenter',()=>{
+    setHover(true)
+  })
   console.log("tool",toolTip)
   const dataHover = [
     {
@@ -425,7 +428,7 @@ const NavBar = () => {
             My Classroom
           </div>
         )}
-        {extra && <div className="userId-Box" title={toolTip.Name} onMouseEnter={()=>setHover(true)}>{name.slice(0, 1)}</div>}
+        {extra && <div className="userId-Box" id="userId-Box" title={toolTip.Name} >{name.slice(0, 1)}</div>}
         {hover &&
           <div className="hover-user-details">
           <div className="hover-user-details-Name">TAMILARASAN</div>
