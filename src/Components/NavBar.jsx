@@ -438,7 +438,7 @@ const NavBar = () => {
         )}
         {extra && (
           <>
-            <div className="userId-Box" id="userId-Box" title={toolTip.Name} onClick={setHover(!hover)}>
+            <div className="userId-Box" id="userId-Box" title={toolTip.Name} onClick={()=>setHover(!hover)}>
               {name.slice(0, 1)}
             </div>
           </>
