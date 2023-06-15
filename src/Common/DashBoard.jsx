@@ -6,7 +6,7 @@ const DashBoard = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/");
+    navigate("/Start-Learning");
   };
   useEffect(() => {
     axios

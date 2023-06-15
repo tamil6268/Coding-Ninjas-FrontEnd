@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,14 +10,11 @@ const NavBar = () => {
   const [name, setName] = useState("");
   const [dummy, setDummy] = useState(2);
   const [menu, setMenu] = useState(false);
-  const [toolTip,setTooltip]=useState({})
-  const [hover,setHover]=useState(false)
-  const navigate=useNavigate();
-  
-  document.getElementById('userId-Box').addEventListener('mouseenter',()=>{
-    setHover(true)
-  })
-  console.log("tool",toolTip)
+  const [toolTip, setTooltip] = useState({});
+  const [hover, setHover] = useState(false);
+  const navigate = useNavigate();
+
+  console.log("tool", toolTip);
   const dataHover = [
     {
       url: "https://files.codingninjas.com/student-24426.png",
@@ -46,15 +43,15 @@ const NavBar = () => {
         .then((res) => {
           if (res.message == "Token Verified") {
             setName(res.user.Name);
-            console.log(res.user)
-            setTooltip({Name:res.user.Name,Email:res.user.Email})
+            console.log(res.user);
+            setTooltip({ Name: res.user.Name, Email: res.user.Email });
           }
         });
     }
   }, [dummy, logOut, logged]);
   const handleLog = () => {
-      setToggle(true);
-      setDummy(4);
+    setToggle(true);
+    setDummy(4);
   };
   const [userData, setUserData] = useState({
     Name: "",
@@ -114,29 +111,36 @@ const NavBar = () => {
       return;
     }
     if (count == 4) {
-      axios.post("https://heisen-tamil-codingninjas.onrender.com/register", userData).then((res) => {
-        alert(res.data.message);
-        console.log(res);
-        setToggle(false);
-        // setTimeout(()=>{
-        //   setToggle(true)
-        //   setLogged(true)
-        // },2000)
-        setDummy(5);
-      });
+      axios
+        .post(
+          "https://heisen-tamil-codingninjas.onrender.com/register",
+          userData
+        )
+        .then((res) => {
+          alert(res.data.message);
+          console.log(res);
+          setToggle(false);
+          // setTimeout(()=>{
+          //   setToggle(true)
+          //   setLogged(true)
+          // },2000)
+          setDummy(5);
+        });
     }
     if (count == 2) {
-      axios.post("https://heisen-tamil-codingninjas.onrender.com/login", userData).then((res) => {
-        alert(res.data.message);
-        console.log(res);
-        setToggle(false);
-        setLogOut(false);
-        setDummy(6);
-        // setTimeout(()=>{
-        //   setToggle(true)
-        //   setLogged(true)
-        // },2000)
-      });
+      axios
+        .post("https://heisen-tamil-codingninjas.onrender.com/login", userData)
+        .then((res) => {
+          alert(res.data.message);
+          console.log(res);
+          setToggle(false);
+          setLogOut(false);
+          setDummy(6);
+          // setTimeout(()=>{
+          //   setToggle(true)
+          //   setLogged(true)
+          // },2000)
+        });
     }
   };
   const handleSubmitRegister = (e) => {
@@ -171,28 +175,35 @@ const NavBar = () => {
     }
 
     if (count == 4) {
-      axios.post("https://heisen-tamil-codingninjas.onrender.com/register", userData).then((res) => {
-        alert(res.data.message);
-        console.log(res);
-        setToggle(false);
-        setDummy(7);
-        // setTimeout(()=>{
-        //   setToggle(true)
-        //   setLogged(true)
-        // },2000)
-      });
+      axios
+        .post(
+          "https://heisen-tamil-codingninjas.onrender.com/register",
+          userData
+        )
+        .then((res) => {
+          alert(res.data.message);
+          console.log(res);
+          setToggle(false);
+          setDummy(7);
+          // setTimeout(()=>{
+          //   setToggle(true)
+          //   setLogged(true)
+          // },2000)
+        });
     }
     if (count == 2) {
-      axios.post("https://heisen-tamil-codingninjas.onrender.com/login", userData).then((res) => {
-        alert(res.data.message);
-        console.log(res);
-        setToggle(false);
-        setLogOut(false);
-        setDummy(8);
-        setName(res.data.userName);
-        setExtra(true);
-        localStorage.setItem("Token", res.data.Token);
-      });
+      axios
+        .post("https://heisen-tamil-codingninjas.onrender.com/login", userData)
+        .then((res) => {
+          alert(res.data.message);
+          console.log(res);
+          setToggle(false);
+          setLogOut(false);
+          setDummy(8);
+          setName(res.data.userName);
+          setExtra(true);
+          localStorage.setItem("Token", res.data.Token);
+        });
     }
     if (Object.keys(errorMessage).length > 0) {
       setError(errorMessage);
@@ -219,13 +230,13 @@ const NavBar = () => {
     }, 2000);
   };
 
-  const handleLogout=()=>{
-      localStorage.removeItem("Token");
-      alert("Logout Succeafully");
-      setLogOut(true);
-      setDummy(3);
-      setExtra(false);
-  }
+  const handleLogout = () => {
+    localStorage.removeItem("Token");
+    alert("Logout Succeafully");
+    setLogOut(true);
+    setDummy(3);
+    setExtra(false);
+  };
   return (
     <div style={{ width: "98.7vw" }}>
       <div id="parent-Nav">
@@ -281,7 +292,7 @@ const NavBar = () => {
             </div>
             <div
               className="hover-effect-child"
-              onClick={() => navigate('/User')}
+              onClick={() => navigate("/User")}
             >
               My Classroom
               <i className="fas fa-caret-right"></i>
@@ -421,27 +432,32 @@ const NavBar = () => {
           <span className="New">New</span>
         </div>
         {extra && (
-          <div
-            className="hover-effect-child"
-            onClick={() => navigate('/User')}
-          >
+          <div className="hover-effect-child" onClick={() => navigate("/User")}>
             My Classroom
           </div>
         )}
-        {extra && <div className="userId-Box" id="userId-Box" title={toolTip.Name} >{name.slice(0, 1)}</div>}
-        {hover &&
-          <div className="hover-user-details">
+        {extra && (
+          <div className="userId-Box" id="userId-Box" title={toolTip.Name}>
+            {name.slice(0, 1)}
+          </div>
+        )}
+        <div className="hover-user-details">
           <div className="hover-user-details-Name">TAMILARASAN</div>
-          <div className="hover-user-details-Time">Using Timezone: Asia - Calcutta</div>
-          <button className="btn-Nav-LogIn" onClick={handleLogout}>Logout</button>
-        </div>
-        }
-         
-        {logOut && <div>
-          <button className="btn-Nav-LogIn" onClick={handleLog} id="Login">
-            Login
+          <div className="hover-user-details-Time">
+            Using Timezone: Asia - Calcutta
+          </div>
+          <button className="btn-Nav-LogIn" onClick={handleLogout}>
+            Logout
           </button>
-        </div>}
+        </div>
+
+        {logOut && (
+          <div>
+            <button className="btn-Nav-LogIn" onClick={handleLog} id="Login">
+              Login
+            </button>
+          </div>
+        )}
         <button className="btn-Nav-entroll hide" onClick={handleClick}>
           Entroll Now
         </button>
