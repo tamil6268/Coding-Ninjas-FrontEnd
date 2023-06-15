@@ -1,4 +1,5 @@
 import './MultiForm.css';
+import Form1 from '../FormEntroll/Form1.jsx';
 const MultiForm=()=>{
     return (
     <div className="multi-form-container">
@@ -6,14 +7,7 @@ const MultiForm=()=>{
 
             <div className="multi-one">
                 <form>
-                    <label>Name :</label>
-                    <input type="text" placeholder='Enter Name'/>
-                    <label>Name :</label>
-                    <input type="text" placeholder='Enter Name'/>
-                    <label>Name :</label>
-                    <input type="text" placeholder='Enter Name'/>
-                    <label>Name :</label>
-                    <input type="text" placeholder='Enter Name'/>
+                    <Form1/>
                 </form>
             </div>
             <div className="multi-two">

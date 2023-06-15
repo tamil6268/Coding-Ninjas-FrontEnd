@@ -236,13 +236,10 @@ const NavBar = () => {
     setLogOut(true);
     setDummy(3);
     setExtra(false);
+    setHover(false)
   };
   const handleHover=()=>{
-    if(localStorage.getItem('Token')){
       setHover(!hover)
-    }else{
-      setHover(false)
-    }
   }
   return (
     <div style={{ width: "98.7vw" }}>
