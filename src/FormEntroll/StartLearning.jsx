@@ -5,6 +5,7 @@ import Footer from "../Components/Footer.jsx";
 import FifthPage from "../Common/FifthPage.jsx";
 import {useNavigate} from 'react-router-dom';
 import BoxCourse from '../Components/BoxCourse.jsx'
+import {useState} from 'react';
 const StartLearning = () => {
   const [BoxCourse1, setBoxCourse1] = useState("one");
   const data = {
