@@ -8,6 +8,7 @@ import DashBoard from './Common/DashBoard.jsx';
 import StartLearning from './FormEntroll/StartLearning.jsx';
 import MultiForm from './Components/MultiForm';
 import End from './FormEntroll/End.jsx'
+import BatchMentors from './FormEntroll/BatchMentors.jsx'
 // import CourseMap from './Common/CourseMap.jsx';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       {/* <Route path="/app/onboarding" element={<MultiForm/>}/> */}
       <Route path="/app/onboarding" element={loading ?<div className="animation-loading"><img className="animation-loading-img" src="https://successinsightsindia.com/wp-content/uploads/2022/02/Coding-Ninjas-Logo.jpg" width={500}alt=""/></div>:<MultiForm/>}/>
       <Route path="/app/onboarding/proceed" element={loading ?<div className="animation-loading"><img className="animation-loading-img" src="https://successinsightsindia.com/wp-content/uploads/2022/02/Coding-Ninjas-Logo.jpg" width={500}alt=""/></div>:<End/>}/>
+      <Route path="/app/onboarding/BatchMentors" element={loading ?<div className="animation-loading"><img className="animation-loading-img" src="https://successinsightsindia.com/wp-content/uploads/2022/02/Coding-Ninjas-Logo.jpg" width={500}alt=""/></div>:<BatchMentors/>}/>
     </Routes>
       </div>
   )
