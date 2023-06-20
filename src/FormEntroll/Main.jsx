@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import F2 from './F2';
 import F1 from './F1';
 import F3 from './F3';
-import {Link} from 'react-router-dom';
-import zIndex from '@mui/material/styles/zIndex';
 
 export class Main extends Component {
     state = {
@@ -11,11 +9,15 @@ export class Main extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        occupation: '',
-        city: '',
+        state:'',
+        pincode:'',
+        mobile:'',
         bio: '',
+        colledgeName:'',
+        course:'',
+        cgpa:''
     }
-
+    
     //proceed to the next react_step_form
     nextStep = () => {
         const { step } = this.state;
@@ -36,13 +38,40 @@ export class Main extends Component {
 
     handleChange = input => e => {
         this.setState({[input]: e.target.value});
-    }
+    //     let errorMessage = {};
+    // if (!this.props.values.firstName) {
+    //   errorMessage.Name = "Should be contain(5-12) letters";
+    // } else {
+    //   errorMessage.Name = "";
+    // }
 
+    // if (!validate.Email.test(userData.Email)) {
+    //   errorMessage.Email = "should be valid Email(eg: abc@gmail.com)";
+    // } else {
+    //   errorMessage.Email = "";
+    // }
+
+    // if (!validate.Password.test(userData.Password)) {
+    //   errorMessage.Password = "password lenght(6-12)";
+    // } else {
+    //   errorMessage.Password = "";
+    // }
+    // if (!validate.Contact.test(userData.Contact)) {
+    //   errorMessage.Contact = "should be 10 digit number";
+    // } else {
+    //   errorMessage.Contact = "";
+    // }
+
+    // if (Object.keys(errorMessage).length > 0) {
+    //   setError(errorMessage);
+    //   return;
+    // }
+    }
+   
     render() {
         const { step } = this.state;
-        const { firstName, lastName, email, occupation, city, bio } = this.state;
-        const values = { firstName, lastName, email, occupation, city, bio }
-
+        const {exp, firstName, lastName, email,state,pincode,mobile, bio,colledgeName,course,cgpa } = this.state;
+        const values = {exp, firstName, lastName, email,state,pincode,mobile, bio,colledgeName,course,cgpa }
         switch(step) {
             case 1:
                 return (
@@ -70,13 +99,6 @@ export class Main extends Component {
                         values={values}
                     />
                 )
-            // case 4:
-            //     return (
-            //     <div style={{width:"100vw",height:"100vh",backgroundColor:"black",display:"flex",flexDirection:"column",rowGap:"20px",zIndex:"+22"}}>
-            //         <img src="https://files.codingninjas.in/course-pause-new-13988.png"width={1200}alt="404 Error"/>
-            //         <Link to="/">Proceed</Link>
-            //     </div>
-            // )
         }
     }
 }
